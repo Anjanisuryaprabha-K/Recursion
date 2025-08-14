@@ -1,3 +1,4 @@
+#sum of numbes in a list
 def sum_of_n_byslicing(lst):
     if not lst:
         return 0
