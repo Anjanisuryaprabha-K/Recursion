@@ -1,0 +1,15 @@
+def palindrome(first,nums,last):
+    if first>=last:
+        return True
+    if nums[first]!=nums[last]:
+        return False
+    return palindrome(first+1,nums,last-1)
+        
+
+nums=[5,3,5]
+res=palindrome(0,nums,len(nums)-1)
+print(res)
+
+nums="prem"
+res=palindrome(0,nums,len(nums)-1)
+print(res)
