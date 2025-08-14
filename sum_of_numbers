@@ -1,0 +1,17 @@
+def sum_of_n_byslicing(lst):
+    if not lst:
+        return 0
+    return lst[0]+sum_of_n_byslicing(lst[1:])
+
+lst=[1,4,5,6,2]
+res=sum_of_n_byslicing(lst)
+print(res)
+
+def sum_of_n_byindexing(index,lst,n):
+    if index==n:
+        return lst[index]
+    return lst[index]+sum_of_n_byindexing(index+1,lst,n)
+
+lst=[1,4,6,2]
+res=sum_of_n_byindexing(0,lst,len(lst)-1)
+print(res)
