@@ -1,0 +1,10 @@
+#tower of hanoi
+def tower_of_hanoi(n,source,temp,destination):
+    if n==1:
+        print(f"move{n} disk from {source} to {destination}")
+        return
+    tower_of_hanoi(n-1,source,destination,temp)
+    print(f"move{n} disk from {source} to {destination}")
+    tower_of_hanoi(n-1,temp,source,destination)
+n=3
+tower_of_hanoi(n,'A','B','C')
