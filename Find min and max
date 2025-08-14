@@ -1,0 +1,11 @@
+#finding min and max elements
+def min_and_max(index,nums):
+    if index==len(nums)-1:
+        return nums[index],nums[index]
+    min,max=min_and_max(index+1,nums)
+    min_val= nums[index] if nums[index]<min else min
+    max_val= nums[index] if nums[index]>max else max
+    return min_val,max_val
+nums=[54,78,65,34,99,70,96,12]
+min,max=min_and_max(0,nums)
+print(f"min={min}\nmax={max}") 
